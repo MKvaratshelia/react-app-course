@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: [
         'plugin:react/recommended',
@@ -18,6 +19,7 @@ module.exports = {
     },
     plugins: ['react', '@typescript-eslint', 'i18next'],
     rules: {
+        'linebreak-style': 'off',
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
@@ -38,6 +40,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'object-curly-newline': 'warn',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'max-len': ['error', { ignoreComments: true }],
     },
     globals: {
         __IS_DEV__: true,
