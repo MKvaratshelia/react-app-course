@@ -40,7 +40,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'object-curly-newline': 'warn',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
-        'max-len': ['error', { ignoreComments: true }],
+        'max-len': ['error', { ignoreComments: true, code: 140 }],
         'no-restricted-globals': 'off',
     },
     globals: {
