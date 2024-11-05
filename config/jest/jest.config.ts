@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 export default {
     clearMocks: true,
     testEnvironment: 'jsdom',
@@ -13,5 +15,12 @@ export default {
         // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
+    modulePaths: ['<rootDir>src'],
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTest.ts'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        '^@/(.*)$': '<rootDir>src/$1',
+    },
     rootDir: '../../',
 };
