@@ -8,7 +8,7 @@ export function buildPlugins({
     paths,
     isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-    return [
+    const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
         }),
@@ -18,13 +18,19 @@ export function buildPlugins({
             chunkFilename: 'css/[name].[contenthash:8].css',
         }),
 
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }),
-
         new DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        new HotModuleReplacementPlugin(),
     ];
+
+    if (isDev) {
+        plugins.push(new HotModuleReplacementPlugin());
+        plugins.push(
+            new BundleAnalyzerPlugin({
+                openAnalyzer: false,
+            }),
+        );
+    }
+
+    return plugins;
 }
