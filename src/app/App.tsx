@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import './styles/index.scss';
+// import './styles/index.scss';
 
 import { useTheme } from 'app/providers/ThemeProvider';
 
@@ -15,7 +15,7 @@ const App = () => {
     const { theme } = useTheme();
 
     return (
-        <div className={classNames('app', {}, [theme])}>
+        <div id="app" className={classNames('app', {}, [theme])}>
             <Suspense fallback="">
                 <Navbar />
                 <div className="content-page">
