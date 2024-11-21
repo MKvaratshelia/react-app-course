@@ -22,7 +22,7 @@ module.exports = {
         'linebreak-style': 'off',
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
-        indent: [2, 4],
+        indent: [1, 4],
         'react/jsx-filename-extension': [
             2,
             { extensions: ['.js', '.jsx', '.tsx'] },

@@ -1,0 +1,26 @@
+.InputWrapper {
+    display: flex;
+}
+
+.placeholder {
+    margin-right: 5px;
+}
+
+.input {
+    flex-grow: 1;
+    display: flex;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: var(--primary-color);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.caretWrapper {
+    flex-grow: 1;
+    position: relative;
+}
