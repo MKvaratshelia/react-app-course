@@ -53,6 +53,10 @@ module.exports = {
         'implicit-arrow-linebreak': 'off',
         'no-param-reassign': 'off',
         'no-undef': 'off',
+        'react/jsx-wrap-multilines': [
+            'error',
+            { declaration: false, assignment: false },
+        ],
     },
     globals: {
         __IS_DEV__: true,
