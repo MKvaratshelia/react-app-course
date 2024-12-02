@@ -43,7 +43,10 @@ module.exports = {
             'error',
             { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
         ],
-        'max-len': ['error', { ignoreComments: true, code: 140 }],
+        'max-len': [
+            'error',
+            { ignoreComments: true, ignoreStrings: true, code: 140 },
+        ],
         'no-restricted-globals': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
