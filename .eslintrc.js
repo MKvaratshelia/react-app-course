@@ -60,6 +60,7 @@ module.exports = {
             'error',
             { declaration: false, assignment: false },
         ],
+        'react/no-array-index-key': 'off',
     },
     globals: {
         __IS_DEV__: true,
